@@ -1,0 +1,25 @@
+1.在开发 Spring MVC 应用时需要在 web.xml 中部署 DispatcherServlet
+<!-- 部署 DispatcherServlet -->
+<servlet>
+    <servlet-name>springmvc</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet
+    </servlet-class>
+    <init-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:springmvc-servlet.xml</param-value>
+    </init-param>
+    <!-- 表示容器再启动时立即加载servlet -->
+    <load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+    <servlet-name>springmvc</servlet-name>
+    <url-pattern>/</url-pattern>
+</servlet-mapping>
+
+2.创建 Web 应用首页 index.jsp
+
+3.创建controller包，然后创建login和register
+
+4.创建spring mvc配置文件并且配置controller映射
+在 WEB-INF 目录下创建名为 dispatcher-servlet.xml 的配置文件
+ <bean name="/login" class="controller.LoginController"/>
