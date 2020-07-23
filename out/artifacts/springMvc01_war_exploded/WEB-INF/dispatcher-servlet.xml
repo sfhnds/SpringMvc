@@ -19,9 +19,9 @@
 <!--    <context:component-scan base-package="service" />-->
     <mvc:annotation-driven/>
 
-     定义跳转的文件的前后缀 ，视图模式配置
+<!--     定义跳转的文件的前后缀 ，视图模式配置 -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 

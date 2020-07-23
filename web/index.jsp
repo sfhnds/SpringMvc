@@ -22,7 +22,7 @@
 <%--表单--%>
 <form action="/login" method="post">
   <%--用户名称--%>
-  用户名： <input type="text" name="name"/><br/>
+  用户名： <input type="text" name="username"/><br/>
   <%--用户密码--%>
   密码： <input type="password" name="password"/><br/>
   <input type="submit" value="提交"/>

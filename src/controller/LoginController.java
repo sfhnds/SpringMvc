@@ -16,23 +16,14 @@ import javax.sound.midi.SoundbankResource;
 @Controller
 public class LoginController {
     @RequestMapping("/login")
-    public String login(@RequestParam("username") String username, @RequestParam("password") String password,
+    public String login(@RequestParam("username") String userName, @RequestParam("password") String password,
                         Model model) {
-        if (username.equals("admin") && password.equals("admin")) {
-            model.addAttribute("username", username);
+        if (userName.equals("admin") && password.equals("admin")) {
+            model.addAttribute("username", userName);
             return "welcome";
         } else {
-            model.addAttribute("username", username);
+            model.addAttribute("username", userName);
             return "register";
         }
     }
-//    public String login(User user, Model model, HttpSession session) {
-//        System.out.println(user.getUserName());
-//        if ("qqqqq".equals(user.getUserName())
-//                && "wwwww".equals(user.getPassword())) {
-//            return "welcome";
-//        }
-//        model.addAttribute("msg", "用户名或密码错误！ ");
-//        return "register";
-//    }
 }
